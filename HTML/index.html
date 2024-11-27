@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <title>Notes Management App</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Notes Management App</h1>
+        </header>
+        <main>
+            <section class="note-input">
+                <input type="text" id="noteTitle" placeholder="Note Title" required>
+                <textarea id="noteContent" placeholder="Write your note here..." required></textarea>
+                <p id="noteError" style="color:red;"></p> <!-- Error message styled red -->
+                <button id="addNoteBtn" onclick="addNote()">Add Note</button>
+                
+            </section>
+
+            <section class="notes-list">
+                <h2>Your Notes</h2>
+                <span id="count"></span> <!-- Initial count -->
+                <div class="notes">
+                    <ul id="notesUl">
+                        <!-- Notes will be dynamically added here -->
+                    </ul>
+                    <button id="logoutBtn" onclick="logout(event)">Logout</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../JS/script.js"></script>
+    <script src="../JS/auth.js"></script>
+</body>
+</html>
