@@ -4,7 +4,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e9ecef;
+    background-color: lightblue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,4 +72,19 @@ button:hover {
 
 .message {
     text-align: center; 
+}
+
+/* Style for the theme toggle button */
+#themeToggleBtn {
+    margin-top: 10px;
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white; /* Text color */
+}
+
+#themeToggleBtn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#themeToggleBtn:focus {
+    outline: none; /* Remove outline on focus */
 }

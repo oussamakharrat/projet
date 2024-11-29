@@ -8,8 +8,9 @@
 </head>
 <body>
     <div class="container">
+        <button id="themeToggleBtn" onclick="toggleTheme()">Switch to Dark Theme</button>
         <form class="login-form" onsubmit="login(event)">
-            <h2>Login</h2>
+            <h2 id="title-login">Login</h2>
             <div class="input-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
@@ -20,9 +21,9 @@
             </div>
             <button type="submit">Login</button>
             <p id="loginMessage" class="message"></p>
-            <p class="message">Not registered? <a href="#">Create an account</a></p>
         </form>
     </div>
     <script src="../JS/auth.js"></script>
+    <script src="../JS/script.js"></script>
 </body>
 </html>

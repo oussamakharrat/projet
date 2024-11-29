@@ -17,6 +17,7 @@ function addNote() {
         // Append title and content to the note
         newNote.appendChild(newTitle);
         newNote.appendChild(newContent);
+        newContent.style.overflow = 'auto';
         
         // Configure the delete button
         but.textContent = "Delete";
@@ -76,7 +77,7 @@ function toggleTheme() {
         document.body.style.backgroundColor = 'black';
         document.body.style.color = 'black';
         document.getElementsByClassName('container')[0].style.backgroundColor = 'gray';
-        let li = document.querySelectorAll('notes-list').getElementsByTagName('li');
+        document.getElementById('title-login').style.color = 'black';
         for (let i = 0; i < li.length; i++) {
             li[i].style.backgroundColor = 'black';
         }
