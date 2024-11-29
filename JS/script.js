@@ -39,7 +39,11 @@ function addNote() {
 
         // Add a click event listener to the delete button
         but.addEventListener('click', function(e) {
-            e.target.parentNode.remove();
+            let conf = confirm('Are you sure you want to delete this note?');
+            if(conf){
+                e.target.parentNode.remove();
+            }
+            
             count();
         });
 
@@ -65,6 +69,22 @@ function count() {
     document.getElementById('count').textContent = `Total Notes: ${notes.length}`;
 }
 
-
-
+var darkMode = false;
+function toggleTheme() {
+    darkMode = !darkMode;
+    if (darkMode) {
+        document.body.style.backgroundColor = 'black';
+        document.body.style.color = 'black';
+        document.getElementsByClassName('container')[0].style.backgroundColor = 'gray';
+        let li = document.querySelectorAll('notes-list').getElementsByTagName('li');
+        for (let i = 0; i < li.length; i++) {
+            li[i].style.backgroundColor = 'black';
+        }
+    } else {
+        document.body.style.backgroundColor = 'lightblue';
+        document.body.style.color = 'black';
+        document.getElementsByClassName('container')[0].style.backgroundColor = 'white';
+        document.getElementsByTagName('h1')[0].style.color = 'black';
+    }
+}
 
