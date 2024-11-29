@@ -1,6 +1,6 @@
 function login(e) {
-    e.preventDefault(); // Prevent form submission
-    // Define the user credentials
+    e.preventDefault(); 
+    
     let user1 = {
         username: 'admin',
         password: 'password'
@@ -10,18 +10,15 @@ function login(e) {
         password: 'user'
     };
 
-    // Get input values from the user
     let inputUsername = document.getElementById('username').value;
     let inputPassword = document.getElementById('password').value;
     let messageElement = document.getElementById('loginMessage');
 
-    // Validate the credentials
     if ((inputUsername === user1.username && inputPassword === user1.password) || (inputUsername === user2.username && inputPassword === user2.password)) {
         messageElement.textContent = 'Login successful!';
         messageElement.style.color = 'green';
-        
-        // Redirect to another HTML page
-        window.location.href = '../HTML/main/index.html'; // Change this to your target page with notes
+   
+        window.location.href = '../HTML/main/index.html'; 
     } else {
         messageElement.textContent = 'Invalid username or password. Please try again.';
         messageElement.style.color = 'red';

@@ -9,25 +9,25 @@ function addNote() {
         let newContent = document.createElement('p');
         var but = document.createElement('button');
 
-        // Set up the title and content
+       
         newTitle.textContent = title + ': ';
         newTitle.style.fontWeight = 'bold';
         newContent.textContent = note;
 
-        // Append title and content to the note
+        
         newNote.appendChild(newTitle);
         newNote.appendChild(newContent);
         newContent.style.overflow = 'auto';
         
-        // Configure the delete button
+        
         but.textContent = "Delete";
         but.style.fontWeight = 'semibold';
         but.style.fontSize = '18px';
         but.style.backgroundColor = 'red';
         but.style.padding = '5px 10px';
         but.style.border = 'none';
-        but.style.marginLeft = '10px'; // Add some space between content and button
-        but.style.cursor = 'pointer'; // Change cursor to pointer on hover
+        but.style.marginLeft = '10px';
+        but.style.cursor = 'pointer';
         but.onmouseover = function() {
             but.style.backgroundColor = 'darkred';
         }
